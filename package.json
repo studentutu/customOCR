@@ -1,0 +1,22 @@
+{
+  "name": "ocrwithtesseract",
+  "version": "1.0.0",
+  "description": "try tesseract.js with the page",
+  "main": "index1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index1.js"
+  },
+  "keywords": [
+    "ocr",
+    "tesseract.js"
+  ],
+  "author": "Roman Fedorov",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.2",
+    "images": "^3.0.1",
+    "multer": "^1.3.0",
+    "tesseract.js": "^1.0.10"
+  }
+}

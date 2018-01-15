@@ -1,0 +1,18 @@
+.myclass1 {
+  margin: auto;
+  width: 70%;
+}
+.marginLeftCustom {
+  margin-left: 15%;
+}
+#found {
+  display: block;
+  width: 25%;
+  margin:auto;
+
+}
+body{
+    background-image: url("woods2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}

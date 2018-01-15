@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Lab#2</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="css/w3.css">
+<link rel="stylesheet" href="css/unique.css">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+</style>
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/UploadAndPreviewCode.js"></script>
+<script src="js\recognizeYourName.js"></script>
+<!-- <script src='https://cdn.rawgit.com/naptha/tesseract.js/1.0.10/dist/tesseract.js'></script> -->
+<!-- <script scr="js\setUpAndCreate.js"></script> -->
+<!-- <script scr="js/tesseract2.js"></script> -->
+
+<!-- <script scr="js/worker.js"></script>
+<script scr="js/index.js"></script> -->
+
+</head>
+
+<body class="w3-light-grey">
+
+<!-- w3-content defines a container for fixed size centered content,
+and is wrapped around the whole page content, except for the footer in this example -->
+<div class="w3-content wholeBody" style="max-width:1400px">
+
+<!-- Header -->
+<header class="w3-container w3-center w3-padding-32">
+  <h1><b>Tesseract.js</b></h1>
+  <p>Small presentations of <span class="w3-tag">Tesseract.js.</span> JQuery for kicks</p>
+</header>
+
+<!-- Grid -->
+<div class="w3-row" >
+
+<!-- Blog entries -->
+<div class="myclass1">
+  <!-- Blog entry #1 -->
+  <div class="w3-white w3-round-xlarge">
+    <img id="UploadAndPreview" src="css/woods.jpg" alt="Your Picture" style="width:100%">
+    <div class="w3-container">
+      <h3><b>Tesseract OCR </b></h3>
+      <h5> Instruction <span class="w3-opacity">January 13, 2018</span></h5>
+    </div>
+
+    <div class="w3-container">
+      <p>Upload the image with a hand-written text, type in your name, click to see if image contains your name.</p>
+    </div>
+    <div class="w3-container">
+      <input class="w3-animate-input w3-button marginLeftCustom w3-round-xlarge" type="file" onchange="readURL(this);"/>
+      <input class="w3-animate-input w3-button w3-round-xlarge" type="text" placeholder="Type your name here:" oninput="yourName(this);"/>
+      <button class="w3-button w3-black w3-round-xlarge" id="changetoLoad" onclick="functionRecognition();">Click to start</button>
+    </div>
+    <div class="w3-container">
+      <p class="w3-button w3-round-xlarge" id="found">Result will be here.</p>
+    </div>
+  </div>
+  <!--End of Blog entry #1 -->
+<br>
+<br>
+<!--End of Blog entries -->
+
+<!-- END GRID -->
+</div><br>
+
+<!-- END w3-content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-dark-grey myclass1 w3-round-xlarge">
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+</footer>
+<br>
+
+<script src="js/functionRecognitionSource.js"></script>
+<!-- <script>
+    //Set the worker, core and lang to local files
+    $(document).ready(function() {
+    var path = (function() { //absolute path
+      var pathArray = window.location.pathname.split( '/' );
+      //console.log(pathArray);
+      pathArray.pop(); //Remove the last ("**.html")
+      pathArray.shift();//Remove the first (it is null)
+      //console.log(window.location.origin);
+      return pathArray.join("/");
+    })();
+    console.log(path);
+
+    window.Tesseract = Tesseract.create({
+    workerPath: path + '/js/worker.js',
+    langPath: path + '/js/eng.traineddata.gz',
+    corePath: path + '/js/index.js'
+    });
+    } );
+</script> -->
+</body>
+</html>
